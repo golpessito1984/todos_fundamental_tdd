@@ -4,7 +4,7 @@ require 'rails_helper'
 
 feature "User creates do" do
   scenario "successfully" do
-    visit root_path
+    sign_in
     click_link("Add a new todo")
     fill_in "Title", with: "Buy Milk" #Label Reference
     # page is provied by Capybara
