@@ -2,7 +2,7 @@ class CompletionsController < ApplicationController
   before_action :set_todo, only: :create
 
   def create
-    @todo.update(completed_at: Time.current)
+    @todo.completed!
     redirect_to todos_path
   end
 
