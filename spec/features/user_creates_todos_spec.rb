@@ -5,11 +5,7 @@ require 'rails_helper'
 feature "User creates do" do
   scenario "successfully" do
     sign_in
-    click_link("Add a new todo")
-    fill_in "Title", with: "Buy Milk" #Label Reference
-    # page is provied by Capybara
-    click_button("Submit")
-
-    expect(page).to have_css ".todo li", text: "Buy Milk"
+    create_todo("Buy Milk")
+    expect(page).to display_todo("Buy Milk")
   end
 end

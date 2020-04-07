@@ -8,5 +8,4 @@ module Features
     fill_in "Email", with: email
     click_button("Sign in")
   end
-
 end
